@@ -1,0 +1,15 @@
+# name etiketi workflow un adini belirtir
+name: First Workflow    
+# on etiketi workflow un ne zaman tetiklenecegini belirtir
+on: workflow_dispatch  # workflow_dispatch in anlami bu workflow un manuel olarak tetiklenmesi gerektiginiu belirtir.
+# jobs etiketi altinda job lar tanimlanir. first-job ozel isimdir, ne istenirse isim verilebilir
+jobs: 
+  first-job:
+# runs on etiketi runner secimi icin kullanilir
+    runs-on: ubuntu-latest
+# yapilacak isle ilgili tum adimlar steps altinda key value olarak eklenir    
+    steps:  
+      - name: First Step
+        run: echo "Hello Github"
+      - name: Second Step
+        run: echo "Goodbye Github"
